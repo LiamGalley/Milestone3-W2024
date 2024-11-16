@@ -1,3 +1,12 @@
+/*Course: 		Web Programming 3
+* Assessment: 	Milestone 3
+* Created by: 	LIAM GALLEY - 2167120
+* Date: 		15 11 2024
+* Class Name: 	HomeController.cs
+* Description: 	Explain what the class stores and its functionality. 
+* Time Task B):	3
+*/
+
 using HPlusSport.Security.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
