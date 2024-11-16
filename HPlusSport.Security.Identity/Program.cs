@@ -11,6 +11,11 @@ namespace HPlusSport.Security.Identity
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            /*builder.WebHost.UseKestrel(options =>
+            {
+                options.AddServerHeader = false;
+            });*/
+
             // Add services to the container.
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -64,6 +69,12 @@ namespace HPlusSport.Security.Identity
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+                await next.Invoke();
+            });
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
