@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HPlusSport.Security.Web.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20240819182656_Initial")]
+    [Migration("20241116181624_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -492,17 +492,17 @@ namespace HPlusSport.Security.Web.Migrations
                         {
                             Id = 1,
                             Email = "adam@example.com",
-                            Hash = "",
-                            Password = "Adam's secret",
-                            Salt = ""
+                            Hash = "v+nke3pzAAVZJNk1OgH9JBwo2N8=",
+                            Password = "",
+                            Salt = "Ac2+ISWx1Kq7g+wv96+1GDRrCmoJYNtILvZI9LXTCTw="
                         },
                         new
                         {
                             Id = 2,
                             Email = "barbara@example.com",
-                            Hash = "",
-                            Password = "b@rb@r@",
-                            Salt = ""
+                            Hash = "nSOQgCzSvru/gxKy6DN1qg/+j1M=",
+                            Password = "",
+                            Salt = "yP6RFQozxB0crt+z+dZB4gM5EIPzpISJURp/UI2+aII="
                         });
                 });
 
